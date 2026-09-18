@@ -1,0 +1,263 @@
+
+/* ==========================================================================
+   URBANSTYLE - MAIN STYLESHEET
+   Student Name: Atlegang Sebidi
+   Student Number: ST10482512
+   ========================================================================== */
+
+/* 1. RESET & BASE STYLES */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #fcfcfc;
+    --card-bg: #ffffff;
+    --text-main: #2b2b2b;
+    --text-muted: #666666;
+    --accent-purple: #7c3aed;
+    --accent-hover: #6d28d9;
+    --border-color: #e5e7eb;
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 2. HEADER & NAVIGATION */
+header {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 4px solid var(--accent-purple);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #d1d5db;
+    font-size: 1.1rem;
+}
+
+nav {
+    background-color: #111827;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Pseudo-classes for Navigation (Rubric Requirement) */
+nav a:hover {
+    color: #ffffff;
+    background-color: rgba(124, 58, 237, 0.2);
+}
+
+nav a:focus {
+    outline: 2px solid var(--accent-purple);
+    outline-offset: 2px;
+}
+
+nav a:active {
+    color: var(--accent-purple);
+}
+
+/* 3. MAIN CONTENT & CARDS */
+main {
+    max-width: 1000px;
+    width: 90%;
+    margin: 2.5rem auto;
+    flex: 1;
+}
+
+section, article {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+h2 {
+    color: var(--accent-purple);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: #1f2937;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p, ul, ol {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* 4. TABLES & FORMS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+label {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+button, .btn, input[type="submit"] {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-purple);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover {
+    background-color: var(--accent-hover);
+}
+
+button:focus, .btn:focus {
+    outline: 2px solid #1f2937;
+    outline-offset: 2px;
+}
+
+button:active, .btn:active {
+    transform: scale(0.98);
+}
+
+/* 5. RESPONSIVE IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 6. FOOTER */
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    border-top: 3px solid var(--accent-purple);
+    font-size: 0.9rem;
+}
+
+/* 7. RESPONSIVE MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    main {
+        width: 95%;
+        margin: 1rem auto;
+        padding: 0;
+    }
+
+    section, article {
+        padding: 1.25rem;
+    }
+}
