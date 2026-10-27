@@ -269,10 +269,10 @@ Complete these checks before submission:
 Hosting platform: Netlify
 
 Live link:
-[ADD REAL NETLIFY LINK]
+[https://urbanstyle-st10482512.netlify.app/]
 
 GitHub repository:
-[ADD REAL GITHUB LINK]
+[https://github.com/seipatichirwa568-star/Sebidi_ST10482512_WEDE5020_POE_P1.git]
 
 The lecturer should open the master branch if
 the repository uses master for submission.
