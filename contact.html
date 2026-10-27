@@ -1,119 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Style | Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact UrbanStyle | General Questions and Feedback</title>
+    <meta name="description"
+          content="Send UrbanStyle a general message using an accessible contact form with JavaScript validation and AJAX delivery.">
+    <meta name="keywords"
+          content="UrbanStyle contact, fashion business message, styling customer support">
+    <meta name="robots" content="index,follow">
+
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
+    <a href="#main" class="skip">Skip to main content</a>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">Urban<span>Style</span></div>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="logo" href="index.html">
+                Urban<span>Style</span>
+            </a>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+            <button type="button"
+                    id="menu-button"
+                    class="menu-button"
+                    aria-controls="main-nav"
+                    aria-expanded="false">
+                Menu ☰
+            </button>
 
-<section class="page-header">
-    <p class="section-label">LET'S TALK</p>
-    <h1>Contact <span>Us</span></h1>
-    <p>Have a question? We would love to hear from you.</p>
-</section>
+            <nav class="nav" id="main-nav"
+                 aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section class="contact-section">
+    <main id="main">
+        <section class="page-intro">
+            <p class="eyebrow">Get in touch</p>
+            <h1>Contact UrbanStyle</h1>
 
-    <div class="contact-info">
+            <p class="lead">
+                This page is for general messages and feedback.
+                For a service quote, use
+                <a href="enquiry.html">Enquiries</a>.
+            </p>
+        </section>
 
-        <p class="section-label">GET IN TOUCH</p>
-        <h2>Let's Start a <span>Conversation</span></h2>
+        <section class="section contact-layout">
 
+            <aside class="panel">
+                <h2>Contact information</h2>
+
+                <p>
+                    The previous website included
+                    <strong>info@urbanstyle.co.za</strong> and
+                    a sample telephone number.
+                    Both must be confirmed with the client
+                    before relying on them.
+                </p>
+
+                <p>
+                    <strong>Area:</strong>
+                    Johannesburg, South Africa
+                    (illustrative only).
+                </p>
+
+                <p class="note">
+                    Messages submitted from the Netlify site are
+                    stored in Netlify Forms. Email notifications
+                    are configured in Netlify separately.
+                </p>
+            </aside>
+
+            <div class="panel">
+                <h2>General contact form</h2>
+
+                <form id="contact-form"
+                      class="form netlify-form"
+                      name="contact"
+                      method="POST"
+                      action="/"
+                      data-netlify="true"
+                      data-netlify-honeypot="bot-field"
+                      novalidate>
+
+                    <input type="hidden"
+                           name="form-name"
+                           value="contact">
+
+                    <p class="hide">
+                        <label>
+                            Do not fill this in
+                            <input name="bot-field">
+                        </label>
+                    </p>
+
+                    <div class="field">
+                        <label for="contact-name">
+                            Full name *
+                        </label>
+
+                        <input id="contact-name"
+                               name="full-name"
+                               autocomplete="name"
+                               required
+                               minlength="2"
+                               maxlength="70"
+                               placeholder="Your full name">
+
+                        <small class="field-error"
+                               id="error-contact-name"
+                               data-error-for="contact-name"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-email">
+                            Email address *
+                        </label>
+
+                        <input id="contact-email"
+                               name="email"
+                               type="email"
+                               autocomplete="email"
+                               required
+                               maxlength="110"
+                               placeholder="name@example.com">
+
+                        <small class="field-error"
+                               id="error-contact-email"
+                               data-error-for="contact-email"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-phone">
+                            Phone (optional)
+                        </label>
+
+                        <input id="contact-phone"
+                               name="phone"
+                               type="tel"
+                               autocomplete="tel"
+                               pattern="[+0-9 ()-]{9,18}"
+                               placeholder="071 234 5678">
+
+                        <small class="field-error"
+                               id="error-contact-phone"
+                               data-error-for="contact-phone"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-topic">
+                            Message type *
+                        </label>
+
+                        <select id="contact-topic"
+                                name="topic"
+                                required>
+                            <option value="">Select a topic</option>
+                            <option>General question</option>
+                            <option>Website feedback</option>
+                            <option>Partnership question</option>
+                            <option>Other</option>
+                        </select>
+
+                        <small class="field-error"
+                               id="error-contact-topic"
+                               data-error-for="contact-topic"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-message">
+                            Message *
+                        </label>
+
+                        <textarea id="contact-message"
+                                  name="message"
+                                  rows="6"
+                                  required
+                                  minlength="10"
+                                  maxlength="1500"
+                                  placeholder="Write your message here"></textarea>
+
+                        <small class="field-error"
+                               id="error-contact-message"
+                               data-error-for="contact-message"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-consent">
+                            Confirmation *
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input id="contact-consent"
+                                   name="consent"
+                                   type="checkbox"
+                                   value="yes"
+                                   required>
+
+                            <span>
+                                I agree to be contacted about my message.
+                            </span>
+                        </label>
+
+                        <small class="field-error"
+                               id="error-contact-consent"
+                               data-error-for="contact-consent"></small>
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn" type="submit">
+                            Send message
+                        </button>
+
+                        <button class="btn outline"
+                                type="button"
+                                id="email-button">
+                            Prepare email in mail app
+                        </button>
+                    </div>
+
+                    <p class="form-status"
+                       role="status"
+                       aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
         <p>
-            Whether you have a question about our services or want to discuss
-            a creative idea, feel free to contact us.
+            <strong>UrbanStyle</strong> ·
+            Express yourself. Create your style.
         </p>
+        <p>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p class="note">
+            WEDE5020 student website concept ·
+            Johannesburg service area is illustrative
+        </p>
+    </footer>
 
-        <div class="contact-detail">
-            <div class="contact-icon">✉</div>
-            <div>
-                <h3>Email</h3>
-                <p>info@urbanstyle.co.za</p>
-            </div>
-        </div>
-
-        <div class="contact-detail">
-            <div class="contact-icon">☎</div>
-            <div>
-                <h3>Phone</h3>
-                <p>+27 12 345 6789</p>
-            </div>
-        </div>
-
-        <div class="contact-detail">
-            <div class="contact-icon">⌖</div>
-            <div>
-                <h3>Location</h3>
-                <p>Johannesburg, South Africa</p>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="contact-form">
-
-        <form>
-
-            <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
-
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Enter your email">
-
-            <label for="service">Service</label>
-            <select id="service">
-                <option>Select a service</option>
-                <option>Personal Styling</option>
-                <option>Custom Designs</option>
-                <option>Creative Consultation</option>
-                <option>Event Styling</option>
-            </select>
-
-            <label for="message">Message</label>
-            <textarea id="message" rows="6" placeholder="Write your message here..."></textarea>
-
-            <button type="submit" class="btn">Send Message</button>
-
-        </form>
-
-    </div>
-
-</section>
-
-<footer>
-    <div class="footer-content">
-        <div>
-            <h3>Urban<span>Style</span></h3>
-            <p>Express yourself. Create your style.</p>
-        </div>
-
-        <div>
-            <p>Email: info@urbanstyle.co.za</p>
-            <p>Phone: +27 12 345 6789</p>
-        </div>
-    </div>
-
-    <div class="copyright">
-        <p>&copy; 2026 UrbanStyle. All Rights Reserved.</p>
-    </div>
-</footer>
-
+    <script defer src="JS/script.js"></script>
 </body>
 </html>

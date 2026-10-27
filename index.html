@@ -1,124 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Style | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>UrbanStyle | Fashion Styling and Creative Design</title>
+    <meta name="description"
+          content="Explore UrbanStyle fashion styling, custom design concepts and creative consultations in a student website project.">
+    <meta name="keywords"
+          content="urban style, personal styling, fashion design, creative services">
+    <meta name="robots" content="index,follow">
+
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
+    <a href="#main" class="skip">Skip to main content</a>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">Urban<span>Style</span></div>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="logo" href="index.html">
+                Urban<span>Style</span>
+            </a>
 
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+            <button type="button" id="menu-button"
+                    class="menu-button" aria-controls="main-nav"
+                    aria-expanded="false">
+                Menu ☰
+            </button>
 
-<section class="hero">
-    <div class="hero-content">
-        <p class="small-title">WELCOME TO URBANSTYLE</p>
-        <h1>Style That Speaks <span>For You.</span></h1>
+            <nav class="nav" id="main-nav"
+                 aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main id="main">
+        <section class="hero reveal">
+            <div>
+                <p class="eyebrow">Style and self-expression</p>
+
+                <h1>
+                    Style that speaks
+                    <span style="color:#7340ca">for you.</span>
+                </h1>
+
+                <p class="lead">
+                    UrbanStyle brings together personal styling,
+                    creative designs and ideas for special occasions.
+                    Explore the concept and send an enquiry about
+                    a service.
+                </p>
+
+                <div class="actions">
+                    <a class="btn" href="services.html">
+                        Explore services
+                    </a>
+
+                    <a class="btn outline" href="enquiry.html">
+                        Make an enquiry
+                    </a>
+                </div>
+            </div>
+
+            <img src="Images/urban-fashion-outfit-01.jpg"
+                 alt="Urban-inspired fashion outfit with a light blue top and jeans"
+                 width="400" height="370">
+        </section>
+
+        <section class="section">
+            <div class="section-head">
+                <h2>What can you explore?</h2>
+            </div>
+
+            <div class="grid">
+                <article class="card reveal">
+                    <h3>Personal Styling</h3>
+                    <p>
+                        Clothing ideas that consider your preferences
+                        and occasion.
+                    </p>
+                    <a href="services.html">View services</a>
+                </article>
+
+                <article class="card reveal">
+                    <h3>Custom Designs</h3>
+                    <p>
+                        A starting point for discussing personalised
+                        creative work.
+                    </p>
+                    <a href="gallery.html">Browse inspiration</a>
+                </article>
+
+                <article class="card reveal">
+                    <h3>Event Styling</h3>
+                    <p>
+                        Discuss styling ideas for a special event
+                        or occasion.
+                    </p>
+                    <a href="enquiry.html">Enquire</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section panel reveal">
+            <h2>Start with an idea</h2>
+
+            <p>
+                Browse our inspiration gallery, then use the
+                enquiry form to describe your style, budget and
+                requirements. Quotes and availability require
+                confirmation.
+            </p>
+
+            <a class="btn" href="gallery.html">
+                See the gallery
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
         <p>
-            Discover modern fashion, creative designs and quality services
-            designed to help you express your unique style.
+            <strong>UrbanStyle</strong> ·
+            Express yourself. Create your style.
         </p>
-
-        <div class="hero-buttons">
-            <a href="services.html" class="btn">Explore Services</a>
-            <a href="contact.html" class="btn btn-outline">Contact Us</a>
-        </div>
-    </div>
-</section>
-
-<section class="welcome">
-    <div>
-        <p class="section-label">WHO WE ARE</p>
-        <h2>More Than Just <span>Style</span></h2>
-
         <p>
-            UrbanStyle is a modern lifestyle brand focused on creativity,
-            quality and individuality. We believe everyone should have the
-            freedom to express themselves through what they wear and create.
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
         </p>
+        <p class="note">
+            WEDE5020 student website concept ·
+            Johannesburg service area is illustrative
+        </p>
+    </footer>
 
-        <a href="about.html" class="text-link">Learn More →</a>
-    </div>
-
-    <div class="welcome-card">
-        <div class="card-icon">✦</div>
-        <h3>Creative</h3>
-        <p>Fresh ideas and modern designs made for today's generation.</p>
-    </div>
-
-    <div class="welcome-card">
-        <div class="card-icon">★</div>
-        <h3>Quality</h3>
-        <p>We focus on delivering quality experiences and products.</p>
-    </div>
-</section>
-
-<section class="features">
-    <p class="section-label">WHAT WE OFFER</p>
-    <h2>Our Main <span>Features</span></h2>
-
-    <div class="feature-grid">
-
-        <div class="feature-card">
-            <div class="feature-number">01</div>
-            <h3>Modern Designs</h3>
-            <p>
-                We create stylish and modern designs suitable for different
-                personalities and occasions.
-            </p>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-number">02</div>
-            <h3>Personal Service</h3>
-            <p>
-                Our services are designed around the needs and preferences
-                of each customer.
-            </p>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-number">03</div>
-            <h3>Creative Ideas</h3>
-            <p>
-                We bring creativity and fresh ideas into everything that we do.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<footer>
-    <div class="footer-content">
-        <div>
-            <h3>Urban<span>Style</span></h3>
-            <p>Express yourself. Create your style.</p>
-        </div>
-
-        <div>
-            <p>Email: info@urbanstyle.co.za</p>
-            <p>Phone: +27 12 345 6789</p>
-        </div>
-    </div>
-
-    <div class="copyright">
-        <p>&copy; 2026 UrbanStyle. All Rights Reserved.</p>
-    </div>
-</footer>
-
+    <script defer src="JS/script.js"></script>
 </body>
 </html>

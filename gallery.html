@@ -1,187 +1,167 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Style | Gallery</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>UrbanStyle Gallery | Fashion Inspiration</title>
+    <meta name="description"
+          content="View six UrbanStyle fashion inspiration images and enlarge each picture in an accessible lightbox.">
+    <meta name="keywords"
+          content="urban style gallery, streetwear inspiration, fashion looks">
+    <meta name="robots" content="index,follow">
+
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
+    <a href="#main" class="skip">Skip to main content</a>
 
-            <div class="logo">
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="logo" href="index.html">
                 Urban<span>Style</span>
-            </div>
+            </a>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html" class="active">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <button type="button" id="menu-button"
+                    class="menu-button" aria-controls="main-nav"
+                    aria-expanded="false">
+                Menu ☰
+            </button>
 
-        </nav>
+            <nav class="nav" id="main-nav"
+                 aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="page-header">
+    <main id="main">
+        <section class="page-intro">
+            <p class="eyebrow">Visual inspiration</p>
+            <h1>Our fashion gallery</h1>
 
-        <p class="section-label">OUR WORK</p>
+            <p class="lead">
+                Select an image to view it in a larger lightbox.
+                The photographs illustrate styles and are not
+                proof of completed client work.
+            </p>
+        </section>
 
-        <h1>
-            Our <span>Gallery</span>
-        </h1>
+        <section class="section">
+            <div class="grid">
 
+                <button class="gallery-btn reveal" type="button"
+                        data-src="Images/urban-fashion-outfit-01.jpg"
+                        data-caption="Relaxed outfit in blue with jeans">
+                    <img src="Images/urban-fashion-outfit-01.jpg"
+                         alt="Relaxed outfit in blue with jeans"
+                         loading="lazy" width="400" height="300">
+                    <strong>Urban fashion</strong>
+                    <span class="muted">Click to enlarge</span>
+                </button>
+
+                <button class="gallery-btn reveal" type="button"
+                        data-src="Images/streetwear-look-02.jpg"
+                        data-caption="Neutral-toned streetwear look">
+                    <img src="Images/streetwear-look-02.jpg"
+                         alt="Neutral-toned streetwear look"
+                         loading="lazy" width="400" height="300">
+                    <strong>Streetwear look</strong>
+                    <span class="muted">Click to enlarge</span>
+                </button>
+
+                <button class="gallery-btn reveal" type="button"
+                        data-src="Images/casual-city-outfit-03.jpg"
+                        data-caption="Casual city outfit with a white T-shirt">
+                    <img src="Images/casual-city-outfit-03.jpg"
+                         alt="Casual city outfit with a white T-shirt"
+                         loading="lazy" width="400" height="300">
+                    <strong>Casual city style</strong>
+                    <span class="muted">Click to enlarge</span>
+                </button>
+
+                <button class="gallery-btn reveal" type="button"
+                        data-src="Images/city-fashion-styling-04.jpg"
+                        data-caption="Fashion outfit with layered jacket">
+                    <img src="Images/city-fashion-styling-04.jpg"
+                         alt="Fashion outfit with layered jacket"
+                         loading="lazy" width="400" height="300">
+                    <strong>Layered fashion</strong>
+                    <span class="muted">Click to enlarge</span>
+                </button>
+
+                <button class="gallery-btn reveal" type="button"
+                        data-src="Images/urban-neutral-outfit-05.jpg"
+                        data-caption="Neutral contemporary city styling">
+                    <img src="Images/urban-neutral-outfit-05.jpg"
+                         alt="Neutral contemporary city styling"
+                         loading="lazy" width="400" height="300">
+                    <strong>Neutral styling</strong>
+                    <span class="muted">Click to enlarge</span>
+                </button>
+
+                <button class="gallery-btn reveal" type="button"
+                        data-src="Images/tailored-fashion-look-06.jpg"
+                        data-caption="Tailored smart outfit in an urban setting">
+                    <img src="Images/tailored-fashion-look-06.jpg"
+                         alt="Tailored smart outfit in an urban setting"
+                         loading="lazy" width="400" height="300">
+                    <strong>Smart fashion</strong>
+                    <span class="muted">Click to enlarge</span>
+                </button>
+
+            </div>
+        </section>
+
+        <dialog class="lightbox" id="photo-dialog"
+                aria-label="Enlarged fashion photograph">
+
+            <button type="button" class="close" id="close-dialog">
+                Close ✕
+            </button>
+
+            <img id="large-photo"
+                 src="Images/urban-fashion-outfit-01.jpg"
+                 alt="Enlarged fashion image"
+                 width="640" height="550">
+
+            <p id="photo-caption"></p>
+        </dialog>
+
+        <section class="section panel">
+            <h2>Have a style in mind?</h2>
+            <p>
+                Use the <a href="enquiry.html">enquiry form</a>
+                to tell us the colours, outfit or occasion
+                you are interested in.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
         <p>
-            A look at some of our creative work and inspiration.
+            <strong>UrbanStyle</strong> ·
+            Express yourself. Create your style.
         </p>
-
-    </section>
-
-    <section class="gallery">
-        <div class="gallery-item">
-
-            <div class="gallery-image">
-                <img src="c:\Users\Letlhogonolo\OneDrive\Pictures\urban style 1.jpg"
-                     alt="Modern fashion style">
-            </div>
-
-            <h3>Modern Style</h3>
-
-            <p>
-                Contemporary fashion inspiration.
-            </p>
-
-        </div>
-
-
-        
-        <div class="gallery-item">
-
-            <div class="gallery-image">
-                <img src="c:\Users\Letlhogonolo\OneDrive\Pictures\urban style 2jpg.jpg"
-                     alt="Creative fashion design">
-            </div>
-
-            <h3>Creative Designs</h3>
-
-            <p>
-                Unique ideas brought to life.
-            </p>
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <div class="gallery-image">
-                <img src="c:\Users\Letlhogonolo\OneDrive\Pictures\urban style 3.jpg"
-                     alt="Urban fashion collection">
-            </div>
-
-            <h3>Urban Collection</h3>
-
-            <p>
-                Inspired by modern city life.
-            </p>
-
-        </div>
-
-
-      
-        <div class="gallery-item">
-
-            <div class="gallery-image">
-                <img src="c:\Users\Letlhogonolo\OneDrive\Pictures\urban style 4.jpg"
-                     alt="Creative vision">
-            </div>
-
-            <h3>Our Vision</h3>
-
-            <p>
-                Creative concepts and fresh ideas.
-            </p>
-
-        </div>
-
-
-      
-        <div class="gallery-item">
-
-            <div class="gallery-image">
-                <img src="c:\Users\Letlhogonolo\OneDrive\Pictures\urban style 5.jpg"
-                     alt="Custom fashion design">
-            </div>
-
-            <h3>Custom Work</h3>
-
-            <p>
-                Personalised creative projects.
-            </p>
-
-        </div>
-
-
-        
-        <div class="gallery-item">
-
-            <div class="gallery-image">
-                <img src="c:\Users\Letlhogonolo\OneDrive\Pictures\urban style 6.jpg"
-                     alt="Fashion self expression">
-            </div>
-
-            <h3>Self Expression</h3>
-
-            <p>
-                Style that represents individuality.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <footer>
-
-        <div class="footer-content">
-
-            <div>
-                <h3>
-                    Urban<span>Style</span>
-                </h3>
-
-                <p>
-                    Express yourself. Create your style.
-                </p>
-            </div>
-
-
-            <div>
-                <p>
-                    Email: info@urbanstyle.co.za
-                </p>
-
-                <p>
-                    Phone: +27 12 345 6789
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="copyright">
-
-            <p>
-                &copy; 2026 UrbanStyle. All Rights Reserved.
-            </p>
-
-        </div>
-
+        <p>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p class="note">
+            WEDE5020 student website concept ·
+            Johannesburg service area is illustrative
+        </p>
     </footer>
 
+    <script defer src="JS/script.js"></script>
 </body>
 </html>
-```

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>UrbanStyle Enquiries | Ask About Styling Services</title>
+    <meta name="description"
+          content="Send an enquiry about UrbanStyle fashion styling and creative services with inline validation and service-specific guidance.">
+    <meta name="keywords"
+          content="styling enquiry, custom design quote, event styling enquiry">
+    <meta name="robots" content="index,follow">
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <a href="#main" class="skip">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="logo" href="index.html">
+                Urban<span>Style</span>
+            </a>
+
+            <button type="button" id="menu-button"
+                    class="menu-button"
+                    aria-controls="main-nav"
+                    aria-expanded="false">
+                Menu ☰
+            </button>
+
+            <nav class="nav" id="main-nav"
+                 aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-intro">
+            <p class="eyebrow">Product and service enquiries</p>
+            <h1>Tell us what you have in mind</h1>
+
+            <p class="lead">
+                Choose a service to get guidance on the details
+                needed for an individual quote.
+                This form does not confirm a booking.
+            </p>
+        </section>
+
+        <section class="section contact-layout">
+
+            <aside class="panel">
+                <h2>Before you enquire</h2>
+
+                <p>
+                    We do not have a verified fixed price list.
+                    Tell us your budget, occasion and design
+                    preferences so the owner can discuss an estimate.
+                </p>
+
+                <p>
+                    Availability, prices and delivery arrangements
+                    must be confirmed separately.
+                </p>
+            </aside>
+
+            <div class="panel">
+                <h2>Service enquiry</h2>
+
+                <form id="enquiry-form"
+                      class="form netlify-form"
+                      name="enquiry"
+                      method="POST"
+                      action="/"
+                      data-netlify="true"
+                      data-netlify-honeypot="bot-field"
+                      novalidate>
+
+                    <input type="hidden"
+                           name="form-name"
+                           value="enquiry">
+
+                    <p class="hide">
+                        <label>
+                            Do not fill this in
+                            <input name="bot-field">
+                        </label>
+                    </p>
+
+                    <div class="field">
+                        <label for="enq-name">Full name *</label>
+
+                        <input id="enq-name"
+                               name="full-name"
+                               autocomplete="name"
+                               required
+                               minlength="2"
+                               maxlength="70"
+                               placeholder="Your full name">
+
+                        <small class="field-error"
+                               id="error-enq-name"
+                               data-error-for="enq-name"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="enq-email">Email address *</label>
+
+                        <input id="enq-email"
+                               name="email"
+                               type="email"
+                               autocomplete="email"
+                               required
+                               maxlength="110"
+                               placeholder="name@example.com">
+
+                        <small class="field-error"
+                               id="error-enq-email"
+                               data-error-for="enq-email"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="enq-phone">
+                            Phone (optional)
+                        </label>
+
+                        <input id="enq-phone"
+                               name="phone"
+                               type="tel"
+                               pattern="[+0-9 ()-]{9,18}"
+                               autocomplete="tel"
+                               placeholder="071 234 5678">
+
+                        <small class="field-error"
+                               id="error-enq-phone"
+                               data-error-for="enq-phone"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="enquiry-service">Service *</label>
+
+                        <select id="enquiry-service"
+                                name="service"
+                                required>
+                            <option value="">Choose a service</option>
+                            <option>Personal Styling</option>
+                            <option>Custom Designs</option>
+                            <option>Creative Consultation</option>
+                            <option>Event Styling</option>
+                        </select>
+
+                        <small class="field-error"
+                               id="error-enquiry-service"
+                               data-error-for="enquiry-service"></small>
+                    </div>
+
+                    <p class="summary"
+                       id="service-guidance"
+                       aria-live="polite">
+                        Choose a service to see what details we need.
+                    </p>
+
+                    <div class="field">
+                        <label for="enq-budget">
+                            Approximate budget in rand (optional)
+                        </label>
+
+                        <input id="enq-budget"
+                               name="budget"
+                               type="number"
+                               min="0"
+                               max="100000"
+                               step="1"
+                               placeholder="e.g. 800">
+
+                        <small class="field-error"
+                               id="error-enq-budget"
+                               data-error-for="enq-budget"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="enq-date">
+                            Preferred date (optional)
+                        </label>
+
+                        <input id="enq-date"
+                               name="preferred-date"
+                               type="date">
+
+                        <small class="field-error"
+                               id="error-enq-date"
+                               data-error-for="enq-date"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="enq-message">
+                            Tell us about your request *
+                        </label>
+
+                        <textarea id="enq-message"
+                                  name="message"
+                                  rows="5"
+                                  minlength="10"
+                                  maxlength="1500"
+                                  required
+                                  placeholder="Include style preferences, your budget and event date if relevant"></textarea>
+
+                        <small class="field-error"
+                               id="error-enq-message"
+                               data-error-for="enq-message"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="enq-consent">
+                            Confirmation *
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input id="enq-consent"
+                                   type="checkbox"
+                                   name="consent"
+                                   value="yes"
+                                   required>
+                            <span>
+                                I agree to be contacted about this enquiry.
+                            </span>
+                        </label>
+
+                        <small class="field-error"
+                               id="error-enq-consent"
+                               data-error-for="enq-consent"></small>
+                    </div>
+
+                    <button class="btn" type="submit">
+                        Submit enquiry
+                    </button>
+
+                    <p class="form-status"
+                       role="status"
+                       aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <strong>UrbanStyle</strong> ·
+            Express yourself. Create your style.
+        </p>
+        <p>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p class="note">
+            WEDE5020 student website concept ·
+            Johannesburg service area is illustrative
+        </p>
+    </footer>
+
+    <script defer src="JS/script.js"></script>
+</body>
+</html>

@@ -1,102 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Style | Services</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>UrbanStyle Services | Styling, Design and Events</title>
+    <meta name="description"
+          content="Search and filter UrbanStyle personal styling, custom design, creative consultation and event styling services.">
+    <meta name="keywords"
+          content="personal styling, custom designs, creative consultation, event styling">
+    <meta name="robots" content="index,follow">
+
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
+    <a href="#main" class="skip">Skip to main content</a>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">Urban<span>Style</span></div>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="logo" href="index.html">
+                Urban<span>Style</span>
+            </a>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html" class="active">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+            <button type="button" id="menu-button"
+                    class="menu-button" aria-controls="main-nav"
+                    aria-expanded="false">
+                Menu ☰
+            </button>
 
-<section class="page-header">
-    <p class="section-label">WHAT WE DO</p>
-    <h1>Our <span>Services</span></h1>
-    <p>Creative services designed around you.</p>
-</section>
-
-<section class="services">
-
-    <div class="service-card">
-        <div class="service-icon">01</div>
-        <h2>Personal Styling</h2>
-        <p>
-            Get personalised style recommendations based on your personality,
-            preferences and occasion.
-        </p>
-        <a href="contact.html" class="service-link">Book Service →</a>
-    </div>
-
-    <div class="service-card featured">
-        <div class="popular">POPULAR</div>
-        <div class="service-icon">02</div>
-        <h2>Custom Designs</h2>
-        <p>
-            Work with our creative team to develop a unique design that
-            represents your personal style.
-        </p>
-        <a href="contact.html" class="service-link">Book Service →</a>
-    </div>
-
-    <div class="service-card">
-        <div class="service-icon">03</div>
-        <h2>Creative Consultation</h2>
-        <p>
-            Discuss your ideas with us and receive professional guidance
-            for your next creative project.
-        </p>
-        <a href="contact.html" class="service-link">Book Service →</a>
-    </div>
-
-    <div class="service-card">
-        <div class="service-icon">04</div>
-        <h2>Event Styling</h2>
-        <p>
-            We help you develop a stylish look and creative concept for
-            special events and occasions.
-        </p>
-        <a href="contact.html" class="service-link">Book Service →</a>
-    </div>
-
-</section>
-
-<section class="service-banner">
-    <h2>Have a unique idea?</h2>
-    <p>Let's turn your idea into something special.</p>
-    <a href="contact.html" class="btn">Get In Touch</a>
-</section>
-
-<footer>
-    <div class="footer-content">
-        <div>
-            <h3>Urban<span>Style</span></h3>
-            <p>Express yourself. Create your style.</p>
+            <nav class="nav" id="main-nav"
+                 aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" aria-current="page">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div>
-            <p>Email: info@urbanstyle.co.za</p>
-            <p>Phone: +27 12 345 6789</p>
-        </div>
-    </div>
+    <main id="main">
+        <section class="page-intro">
+            <p class="eyebrow">What we offer</p>
+            <h1>Services to explore</h1>
 
-    <div class="copyright">
-        <p>&copy; 2026 UrbanStyle. All Rights Reserved.</p>
-    </div>
-</footer>
+            <p class="lead">
+                Use the search box and filters below to find
+                the kind of creative service you need.
+            </p>
+        </section>
 
+        <section class="section">
+            <div class="controls">
+                <div class="control">
+                    <label for="service-search">
+                        Search services
+                    </label>
+                    <input id="service-search" type="search"
+                           placeholder="Try styling or design">
+                </div>
+
+                <div class="control">
+                    <label for="service-category">Category</label>
+                    <select id="service-category">
+                        <option value="all">All categories</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="design">Design</option>
+                        <option value="events">Events</option>
+                    </select>
+                </div>
+
+                <div class="control">
+                    <label for="service-sort">
+                        Sort by name
+                    </label>
+                    <select id="service-sort">
+                        <option value="original">Original order</option>
+                        <option value="az">A to Z</option>
+                        <option value="za">Z to A</option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="service-count" class="search-status"
+               aria-live="polite">
+                Loading services...
+            </p>
+
+            <div id="service-grid" class="grid two">
+                <p>
+                    JavaScript is required to show the
+                    searchable services.
+                </p>
+            </div>
+        </section>
+
+        <section class="section panel">
+            <h2>What about prices?</h2>
+            <p>
+                Each project is different. The original UrbanStyle
+                website does not provide a verified price list.
+
+                Please ask about cost and availability through
+                our <a href="enquiry.html">enquiry form</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <strong>UrbanStyle</strong> ·
+            Express yourself. Create your style.
+        </p>
+        <p>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p class="note">
+            WEDE5020 student website concept ·
+            Johannesburg service area is illustrative
+        </p>
+    </footer>
+
+    <script defer src="JS/script.js"></script>
 </body>
 </html>
