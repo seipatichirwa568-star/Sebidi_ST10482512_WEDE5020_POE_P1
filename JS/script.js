@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".gallery-btn").forEach(
             function (button) {
                 button.addEventListener("click", function () {
-                    large.src = button.dataset.src;
+                    large.src = button.querySelector("img").src;
                     large.alt = button.dataset.caption;
                     caption.textContent = button.dataset.caption;
 
