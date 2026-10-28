@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap:https://urbanstyle-st10482512.netlify.app
+Sitemap:
+User-agent: *
+Allow: /
+
+Sitemap: https://seipatichirwa568-star.github.io/Sebidi_ST10482512_WEDE5020_POE_P1/
+

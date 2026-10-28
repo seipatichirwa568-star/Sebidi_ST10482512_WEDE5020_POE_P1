@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://urbanstyle-st10482512.netlify.app/</loc>
-  </url>
+    <!-- Home -->
+    <url>
+        <loc>https://seipatichirwa568-star.github.io/Sebidi_ST10482512_WEDE5020_POE_P1/</loc>
+    </url>
 
-  <url>
-    <loc>https://urbanstyle-st10482512.netlify.app/about.html</loc>
-  </url>
+    <!-- About -->
+    <url>
+        <loc>https://seipatichirwa568-star.github.io/Sebidi_ST10482512_WEDE5020_POE_P1/about.html</loc>
+    </url>
 
-  <url>
-    <loc>https://urbanstyle-st10482512.netlify.app/services.html</loc>
-  </url>
+    <!-- Services -->
+    <url>
+        <loc>https://seipatichirwa568-star.github.io/Sebidi_ST10482512_WEDE5020_POE_P1/services.html</loc>
+    </url>
 
-  <url>
-    <loc>https://urbanstyle-st10482512.netlify.app/gallery.html</loc>
-  </url>
+    <!-- Gallery -->
+    <url>
+        <loc>https://seipatichirwa568-star.github.io/Sebidi_ST10482512_WEDE5020_POE_P1/gallery.html</loc>
+    </url>
 
-  <url>
-    <loc>https://urbanstyle-st10482512.netlify.app/enquiry.html</loc>
-  </url>
+    <!-- Enquiry -->
+    <url>
+        <loc>https://seipatichirwa568-star.github.io/Sebidi_ST10482512_WEDE5020_POE_P1/enquiry.html</loc>
+    </url>
 
-  <url>
-    <loc>https://urbanstyle-st10482512.netlify.app/contact.html</loc>
-  </url>
+    <!-- Contact -->
+    <url>
+        <loc>https://seipatichirwa568-star.github.io/Sebidi_ST10482512_WEDE5020_POE_P1/contact.html</loc>
+    </url>
 
 </urlset>
